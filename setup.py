@@ -1,4 +1,6 @@
 #「何を実行するか」を明示する場所
+import os                  #追加。OSの機能のパッケージ
+from glob import glob      #追加。グロブ（ワイルドカード）を扱う関数
 from setuptools import find_packages, setup
 
 package_name = 'mypkg'
@@ -11,6 +13,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+	(os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),  #追加
     ],
     install_requires=['setuptools'],
     zip_safe=True,
