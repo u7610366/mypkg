@@ -1,4 +1,6 @@
 #「何を実行するか」を明示する場所
+# SPDX-FileCopyrightText: 2026 Kazuki Nakatomi
+# SPDX-License-Identifier: BSD-3-Clause
 import os                  #追加。OSの機能のパッケージ
 from glob import glob      #追加。グロブ（ワイルドカード）を扱う関数
 from setuptools import find_packages, setup
